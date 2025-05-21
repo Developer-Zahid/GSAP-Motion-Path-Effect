@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Motion Path Effect</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <main class="main">
+        <!-- <svg class="line-svg cc-mobile" width="1344" height="455" viewBox="0 0 1344 455" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_5002_778)">
+                <path data-line="digitalocean" d="M727 168.5H802.267C804.698 168.5 807.072 167.762 809.074 166.382L945.926 72.1175C947.928 70.7384 950.302 70 952.733 70H1391.5" stroke="#DFE4EC"/>
+                <path data-line="airbnb" d="M727 191.5H1046.79C1049.21 191.5 1051.57 192.228 1053.56 193.59L1192.44 288.41C1194.43 289.772 1196.79 290.5 1199.21 290.5H1392.5" stroke="#DFE4EC"/>
+                <path data-line="amazon" d="M1392 128H989.231C985.895 128 982.71 129.388 980.44 131.832L925 191.5" stroke="#DFE4EC"/>
+                <path data-line="spotify" d="M775 191.5L869.527 281.204C871.757 283.32 874.714 284.5 877.788 284.5H1015.74C1018.19 284.5 1020.58 285.249 1022.59 286.646L1157.41 380.354C1159.42 381.751 1161.81 382.5 1164.26 382.5H1391.5" stroke="#DFE4EC"/>
+                <path d="M685 91V338.979C685 342.695 686.722 346.201 689.662 348.474L824.259 452.495C826.36 454.119 828.941 455 831.597 455H1392" stroke="#DFE4EC"/>
+                <path d="M659 90V338.979C659 342.695 657.278 346.201 654.338 348.474L519.741 452.495C517.64 454.119 515.059 455 512.403 455H-48" stroke="#DFE4EC"/>
+                <path data-line="midjourney" d="M617 191.5H299.743C297.305 191.5 294.926 190.758 292.921 189.372L155.079 94.1275C153.074 92.7421 150.695 92 148.257 92H-48" stroke="#DFE4EC"/>
+                <path data-line="openai" d="M-48 0H182.257C184.695 0 187.074 0.742081 189.079 2.12752L326.921 97.3725C328.926 98.7579 331.305 99.5 333.743 99.5H470.285C473.316 99.5 476.234 100.647 478.454 102.71L574 191.5" stroke="#DFE4EC"/>
+                <path data-line="netflix" d="M617 214.5H544.27C541.816 214.5 539.421 215.253 537.407 216.656L401.593 311.344C399.579 312.747 397.184 313.5 394.73 313.5H-48" stroke="#DFE4EC"/>
+                <path d="M-48 253.5H356.971C360.48 253.5 363.813 251.964 366.093 249.297L415.5 191.5" stroke="#DFE4EC"/>
+            </g>
+            <g>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 662 86)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 110 88)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 977 66)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 688 86)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 337 188)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 1067 124)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 397 96)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 267 50)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 1127 66)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 156 250)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 856 188)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 296 250)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 1106 223)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 484 188)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 1194 124)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 465 265)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 1215 287)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 155 310)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 1106 338)" fill="white" stroke="#DFE4EC"/>
+                <rect x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 1260 378)" fill="white" stroke="#DFE4EC"/>
+            </g>
+            <g clip-path="url(#clip1_5002_778)">
+                <mask id="path-33-inside-1_5002_778" fill="white">
+                    <path d="M617 147C617 135.954 625.954 127 637 127H707C718.046 127 727 135.954 727 147V217C727 228.046 718.046 237 707 237H637C625.954 237 617 228.046 617 217V147Z"/>
+                </mask>
+                <path d="M617 147C617 135.954 625.954 127 637 127H707C718.046 127 727 135.954 727 147V217C727 228.046 718.046 237 707 237H637C625.954 237 617 228.046 617 217V147Z" fill="url(#paint0_linear_5002_778)"/>
+                <path d="M615 147C615 134.85 624.85 125 637 125H707C719.15 125 729 134.85 729 147H725C725 137.059 716.941 129 707 129H637C627.059 129 619 137.059 619 147H615ZM727 237H617H727ZM637 237C624.85 237 615 227.15 615 215V147C615 134.85 624.85 125 637 125V129C627.059 129 619 137.059 619 147V217C619 228.046 627.059 237 637 237ZM707 125C719.15 125 729 134.85 729 147V215C729 227.15 719.15 237 707 237C716.941 237 725 228.046 725 217V147C725 137.059 716.941 129 707 129V125Z" fill="#A96DFD" mask="url(#path-33-inside-1_5002_778)"/>
+                <path d="M679.344 206L670.882 191.273L661.887 175.609L666.119 168.236L672.003 158L680.168 172.226L676.766 178.149L672.003 169.857L668.697 175.609L673.732 184.375L682.746 200.071H689.34L685.488 193.338L688.89 187.416L699.563 206H679.344Z" fill="white"/>
+                <path d="M644.437 206L658.607 181.335L662.008 187.257L658.961 192.571L654.648 200.065H669.356L672.763 206H644.437Z" fill="white"/>
+            </g>
+            <rect x="616" y="126" width="112" height="112" rx="21" stroke="#8C3CFC" stroke-width="2"/>
+            <defs>
+                <linearGradient id="paint0_linear_5002_778" x1="672" y1="238.618" x2="672" y2="128.618" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#8C3CFC" stop-opacity="0.72"/>
+                    <stop offset="1" stop-color="#8C3CFC"/>
+                </linearGradient>
+                <clipPath id="clip0_5002_778">
+                    <rect width="1344" height="455" fill="white"/>
+                </clipPath>
+                <clipPath id="clip1_5002_778">
+                    <rect x="617" y="127" width="110" height="110" rx="20" fill="white"/>
+                </clipPath>
+            </defs>
+        </svg> -->
+
+        <svg class="line-svg" width="1344" height="455" viewBox="0 0 1344 455" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="new-lines-group">
+                <path id="Vector 8017" d="M1344 455H831.62C828.967 455 826.389 454.121 824.288 452.5L689.668 348.603C686.724 346.331 685 342.822 685 339.103V91" stroke="#DFE4EC" stroke-linecap="round"/>
+                <path id="Vector 8012" d="M0 455H512.274C514.926 455 517.503 454.122 519.602 452.502L654.328 348.603C657.274 346.331 659 342.821 659 339.1V90" stroke="#DFE4EC" stroke-linecap="round"/>
+                <path data-line="spotify" d="M1344 382.5H1164.26C1161.81 382.5 1159.42 381.751 1157.41 380.354L1022.59 286.646C1020.58 285.249 1018.19 284.5 1015.74 284.5H877.788C874.714 284.5 871.757 283.32 869.527 281.204L778.473 194.796C776.243 192.68 773.286 191.5 770.212 191.5H673" stroke="#DFE4EC" stroke-linecap="round"/>
+                <path data-line="airbnb" d="M1344 290.5H1199.37C1196.96 290.5 1194.61 289.773 1192.61 288.414L1053.56 193.586C1051.57 192.227 1049.21 191.5 1046.8 191.5H673" stroke="#DFE4EC" stroke-linecap="round"/>
+                <path data-line="amazon" d="M1344 128H989.231C985.895 128 982.71 129.388 980.44 131.832L928.56 187.668C926.29 190.112 923.105 191.5 919.769 191.5H673" stroke="#DFE4EC" stroke-linecap="round"/>
+                <path data-line="digitalocean" d="M1344 70H952.733C950.302 70 947.928 70.7384 945.926 72.1175L809.074 166.382C807.072 167.762 804.698 168.5 802.267 168.5H673" stroke="#DFE4EC" stroke-linecap="round"/>
+                <path data-line="netflix" d="M0 313.5H394.598C397.051 313.5 399.444 312.749 401.457 311.347L537.409 216.653C539.421 215.251 541.815 214.5 544.267 214.5H673" stroke="#DFE4EC" stroke-linecap="round"/>
+                <path id="Vector 8010" d="M0 253.5H356.77C360.271 253.5 363.597 251.972 365.876 249.316L411.909 195.684C414.188 193.028 417.514 191.5 421.014 191.5H673" stroke="#DFE4EC" stroke-linecap="round"/>
+                <path data-line="midjourney" d="M0 92H148.257C150.695 92 153.074 92.7421 155.079 94.1275L292.921 189.372C294.926 190.758 297.305 191.5 299.743 191.5H673" stroke="#DFE4EC" stroke-linecap="round"/>
+                <path data-line="openai" d="M0 0H182.257C184.695 0 187.074 0.742084 189.079 2.12753L326.921 97.3725C328.926 98.7579 331.305 99.5 333.743 99.5H470.285C473.316 99.5 476.234 100.647 478.454 102.71L570.546 188.29C572.766 190.353 575.684 191.5 578.715 191.5H673" stroke="#DFE4EC" stroke-linecap="round"/>
+            </g>
+            <g id="dot">
+                <rect id="Pattern" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 662 86)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_2" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 110 88)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_3" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 977 66)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_4" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 688 86)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_5" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 337 188)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_6" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 1067 124)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_7" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 397 96)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_8" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 267 50)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_9" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 1127 66)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_10" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 156 250)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_11" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 856 188)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_12" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 296 250)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_13" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 1106 223)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_14" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 484 188)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_15" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 1194 124)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_16" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 465 265)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_17" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 1215 287)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_18" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 155 310)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_19" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 1106 338)" fill="white" stroke="#DFE4EC"/>
+                <rect id="Pattern_20" x="-0.5" y="0.5" width="7" height="7" rx="1.5" transform="matrix(-1 0 0 1 1260 378)" fill="white" stroke="#DFE4EC"/>
+            </g>
+            <g id="Button">
+                <g clip-path="url(#clip1_7001_789)">
+                    <g id="Badge">
+                        <mask id="path-33-inside-1_7001_789" fill="white">
+                            <path d="M617 147C617 135.954 625.954 127 637 127H707C718.046 127 727 135.954 727 147V217C727 228.046 718.046 237 707 237H637C625.954 237 617 228.046 617 217V147Z"/>
+                        </mask>
+                        <path d="M617 147C617 135.954 625.954 127 637 127H707C718.046 127 727 135.954 727 147V217C727 228.046 718.046 237 707 237H637C625.954 237 617 228.046 617 217V147Z" fill="url(#paint0_linear_7001_789)"/>
+                        <path d="M615 147C615 134.85 624.85 125 637 125H707C719.15 125 729 134.85 729 147H725C725 137.059 716.941 129 707 129H637C627.059 129 619 137.059 619 147H615ZM727 237H617H727ZM637 237C624.85 237 615 227.15 615 215V147C615 134.85 624.85 125 637 125V129C627.059 129 619 137.059 619 147V217C619 228.046 627.059 237 637 237ZM707 125C719.15 125 729 134.85 729 147V215C729 227.15 719.15 237 707 237C716.941 237 725 228.046 725 217V147C725 137.059 716.941 129 707 129V125Z" fill="#A96DFD" mask="url(#path-33-inside-1_7001_789)"/>
+                        <g id="Group">
+                            <path id="Vector" d="M679.344 206L670.882 191.273L661.887 175.609L666.119 168.236L672.003 158L680.168 172.226L676.766 178.149L672.003 169.857L668.697 175.609L673.732 184.375L682.746 200.071H689.34L685.488 193.338L688.89 187.416L699.563 206H679.344Z" fill="white"/>
+                            <path id="Vector_2" d="M644.437 206L658.607 181.335L662.008 187.257L658.961 192.571L654.648 200.065H669.356L672.763 206H644.437Z" fill="white"/>
+                        </g>
+                    </g>
+                </g>
+                <rect x="616" y="126" width="112" height="112" rx="21" stroke="#8C3CFC" stroke-width="2"/>
+            </g>
+            <defs>
+                <linearGradient id="paint0_linear_7001_789" x1="672" y1="238.618" x2="672" y2="128.618" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#8C3CFC" stop-opacity="0.72"/>
+                    <stop offset="1" stop-color="#8C3CFC"/>
+                </linearGradient>
+                <clipPath id="clip1_7001_789">
+                    <rect x="617" y="127" width="110" height="110" rx="20" fill="white"/>
+                </clipPath>
+            </defs>
+        </svg>
+
+        <div class="icon-wrapper">
+            <div class="icon" data-icon="openai">
+                <img src="./assets/images/openai.svg" alt="openai" width="43" height="43" />
+            </div>
+            <div class="icon" data-icon="midjourney">
+                <img src="./assets/images/midjourney.svg" alt="midjourney" width="43" height="43" />
+            </div>
+            <div class="icon" data-icon="netflix">
+                <img src="./assets/images/netflix.svg" alt="netflix" width="43" height="43" />
+            </div>
+            <div class="icon" data-icon="digitalocean">
+                <img src="./assets/images/digitalocean.svg" alt="digitalocean" width="43" height="43" />
+            </div>
+            <div class="icon" data-icon="amazon">
+                <img src="./assets/images/amazon.svg" alt="amazon" width="43" height="43" />
+            </div>
+            <div class="icon" data-icon="airbnb">
+                <img src="./assets/images/airbnb.svg" alt="airbnb" width="43" height="43" />
+            </div>
+            <div class="icon" data-icon="spotify">
+                <img src="./assets/images/spotify.svg" alt="spotify" width="43" height="43" />
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathPlugin.min.js"></script>
+    <script src="./assets/js/script.js" defer></script>
+</body>
+</html>

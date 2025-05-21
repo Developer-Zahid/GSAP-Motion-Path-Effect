@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,
+svg
+{
+    display: block;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* body {
+    background-color: #151C28;
+} */
+
+.main {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 100svh;
+    padding-block: 1rem;
+    /*
+        overflow-x: clip;
+        width: 100%;
+    */
+
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment */
+    contain: content;
+}
+
+.line-svg {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &.cc-mobile {
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+    &.cc-desktop {
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+}
+
+.icon-wrapper {
+    position: fixed;
+    top: -100vh;
+    left: -100vw;
+}
+
+.icon {
+    display: grid;
+    place-items: center;
+    width: clamp(3rem, 2.295774647887324rem + 3.004694835680751vw, 5rem);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background:
+        radial-gradient(circle at 50.25% 68.375%, #E2E5E6 0%, white 86.87%) padding-box,
+        linear-gradient(to bottom, #E2E5E6 40%, white 100%) border-box;
+
+    img {
+        width: clamp(1.625rem, 1.2508802816901408rem + 1.5962441314553992vw, 2.6875rem);
+        aspect-ratio: 1 / 1;
+    }
+
+}
