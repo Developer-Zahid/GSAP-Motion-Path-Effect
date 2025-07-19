@@ -1,21 +1,21 @@
 // document.addEventListener('DOMContentLoaded', function () {
 //     gsap.registerPlugin(MotionPathPlugin);
-//     const mainTL = gsap.timeline();
+//     const motionPathMainTL = gsap.timeline();
 
 //     document.querySelectorAll('[data-line]').forEach((currentLinePath) => {
 //         const iconSelector = `[data-icon="${currentLinePath.dataset.line}"]`;
 //         const icon = document.querySelector(iconSelector);
 
 //         // Create a looping timeline for this icon
-//         const loopTL = gsap.timeline({ repeat: -1, defaults: { transformOrigin: "50% 50%" } });
+//         const motionPathLoopTL = gsap.timeline({ repeat: -1, defaults: { transformOrigin: "50% 50%" } });
 
 //         // Step 1: Start with Fade out and scale down
-//         loopTL.from(icon, 
+//         motionPathLoopTL.from(icon, 
 //             { opacity: 0, scale: 0, duration: 0.5, ease: "none" }
 //         );
 
 //         // Step 2: Motion path
-//         loopTL.to(icon, {
+//         motionPathLoopTL.to(icon, {
 //             duration: gsap.utils.random(4, 8),
 //             ease: "power2.inOut",
 //             motionPath: {
@@ -26,13 +26,13 @@
 //         }, 0);
 
 //         // Step 3: End with Fade out and scale down
-//         loopTL.to(icon, 
+//         motionPathLoopTL.to(icon, 
 //             { opacity: 0, scale: 0, duration: 0.5, ease: "power4.out" },
 //             ">-1"
 //         );
 
-//         // Add this looped timeline to the mainTL timeline
-//         mainTL.add(loopTL, gsap.utils.random(0,5));
+//         // Add this looped timeline to the motionPathMainTL timeline
+//         motionPathMainTL.add(motionPathLoopTL, gsap.utils.random(0,5));
 //     });
 // });
 
@@ -40,7 +40,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     gsap.registerPlugin(MotionPathPlugin);
 
-    let mainTL;
+    let motionPathMainTL;
 
     // Responsive handling using callAfterResize
     function callAfterResize(func, delay) {
@@ -51,18 +51,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function createAnimation() {
-        if (mainTL) {
-            mainTL.kill(); // Clean up previous animation
+        if (motionPathMainTL) {
+            motionPathMainTL.kill(); // Clean up previous animation
         }
 
-        mainTL = gsap.timeline();
+        motionPathMainTL = gsap.timeline();
 
-        const validPaths = Array.from(document.querySelectorAll('[data-line]')).filter(path => {
-            const parentSVG = path.closest('svg');
-            return parentSVG && getComputedStyle(parentSVG).display !== 'none';
+        const validSVGPaths = Array.from(document.querySelectorAll('[data-line]')).filter(path => {
+            const currentParentSVG = path.closest('svg');
+            return currentParentSVG && getComputedStyle(currentParentSVG).display !== 'none';
         });
 
-        validPaths.map((currentLinePath) => {
+        validSVGPaths.map((currentLinePath) => {
             console.log(currentLinePath);
             
             const iconSelector = `[data-icon="${currentLinePath.dataset.line}"]`;
@@ -71,20 +71,20 @@ document.addEventListener('DOMContentLoaded', function () {
             // Optional: reset styles on resize to avoid leftovers
             gsap.set(icon, { clearProps: "all" });
 
-            const loopTL = gsap.timeline({
+            const motionPathLoopTL = gsap.timeline({
                 repeat: -1,
                 defaults: { transformOrigin: "50% 50%" }
             });
 
             // Step 1: Fade in
-            loopTL.from(icon, {
+            motionPathLoopTL.from(icon, {
                 opacity: 0,
                 scale: 0,
                 duration: 0.5,
             });
 
             // Step 2: Motion path
-            loopTL.to(icon, {
+            motionPathLoopTL.to(icon, {
                 duration: gsap.utils.random(4, 8),
                 ease: "power2.inOut",
                 motionPath: {
@@ -95,14 +95,14 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 0); // start at time 0 (sync with previous step)
 
             // Step 3: Fade out
-            loopTL.to(icon, {
+            motionPathLoopTL.to(icon, {
                 opacity: 0,
                 scale: 0,
                 duration: 0.5,
                 ease: "power4.out"
             }, ">-1"); // start 1 seconds before the end of the previous step
 
-            mainTL.add(loopTL, gsap.utils.random(0, 5));
+            motionPathMainTL.add(motionPathLoopTL, gsap.utils.random(0, 5));
         });
     }
 
